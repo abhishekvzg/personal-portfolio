@@ -1,65 +1,54 @@
-import NewsletterForm from "./NewsletterForm";
+import { Linkedin, Mail, Github } from "lucide-react";
 
 const Footer = () => {
-  const helpLinks = [{ label: "CONTACT", href: "mailto:hello@vesper.com" }];
-
   const socialLinks = [
-    { label: "INSTAGRAM", href: "https://instagram.com" },
-    { label: "TWITTER", href: "https://twitter.com" },
-    { label: "PINTEREST", href: "https://pinterest.com" },
+    { label: "LinkedIn", href: "https://linkedin.com/in/abhishek", icon: Linkedin },
+    { label: "Email", href: "mailto:abhishek@example.com", icon: Mail },
+    { label: "GitHub", href: "https://github.com/abhishek", icon: Github },
   ];
 
   return (
-    <footer className="bg-accent-red text-foreground">
+    <footer className="bg-foreground text-background">
       <div className="px-5 md:px-20 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-x-12 lg:gap-x-16 items-start">
-          {/* Logo Section */}
-          <div className="md:col-span-1">
-            <div className="font-serif text-3xl md:text-4xl font-bold italic">
-              VESPER
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          {/* Name */}
+          <div>
+            <div className="text-3xl md:text-4xl font-black uppercase tracking-tight">
+              ABHISHEK
             </div>
+            <p className="text-background/60 mt-2 text-sm uppercase tracking-wide">
+              Product Manager
+            </p>
           </div>
 
-          {/* Connect */}
-          <div className="md:col-span-1">
-            <h3 className="footer-header">CONNECT</h3>
-            <nav className="flex flex-col gap-2">
-              {helpLinks.map((link) => (
-                <a key={link.label} href={link.href} className="footer-link">
-                  {link.label}
-                </a>
-              ))}
-            </nav>
+          {/* Tagline */}
+          <div className="text-center">
+            <p className="font-serif text-lg text-background/80">
+              Building products users love.
+            </p>
           </div>
 
           {/* Social */}
-          <div className="md:col-span-1">
-            <h3 className="footer-header">FOLLOW</h3>
-            <nav className="flex flex-col gap-2">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-link"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-          </div>
-
-          {/* Newsletter */}
-          <div id="newsletter" className="md:col-span-1">
-            <NewsletterForm inputClassName="min-w-72" />
+          <div className="flex justify-start md:justify-end gap-4">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.href.startsWith("mailto") ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                className="p-3 bg-background/10 rounded-full hover:bg-background/20 transition-colors"
+                aria-label={link.label}
+              >
+                <link.icon className="w-5 h-5" />
+              </a>
+            ))}
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-6 border-t border-foreground/20">
-          <p className="text-sm text-center md:text-left uppercase">
-            © 2025 VESPER. ALL RIGHTS RESERVED.
+        <div className="mt-12 pt-6 border-t border-background/20">
+          <p className="text-sm text-center text-background/60 uppercase tracking-wide">
+            © 2025 ABHISHEK. All rights reserved.
           </p>
         </div>
       </div>
