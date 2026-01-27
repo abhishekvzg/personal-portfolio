@@ -2,7 +2,7 @@ import { Linkedin, Mail } from "lucide-react";
 
 const ContactBar = () => {
   return (
-    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-foreground text-background px-6 py-3 rounded-full shadow-2xl flex items-center gap-6">
+    <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-foreground text-background px-6 py-3 rounded-full shadow-2xl flex items-center gap-6 dark:bg-background dark:text-foreground dark:border dark:border-foreground/20">
       <a
         href="https://linkedin.com/in/abhishek"
         target="_blank"

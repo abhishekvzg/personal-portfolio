@@ -64,12 +64,38 @@
   }
 
   .dark {
-    --background: 20 18% 16%; /* #2D2520 */
-    --foreground: 32 71% 91%; /* #fce5cf */
-    --card: 20 14% 25%;
-    --card-foreground: 32 71% 91%;
-    --border: 20 12% 37%;
-    --input: 20 12% 37%;
+    --background: 220 20% 10%; /* Deep blue-black */
+    --foreground: 45 30% 96%; /* Warm off-white */
+
+    --card: 220 18% 14%;
+    --card-foreground: 45 30% 96%;
+
+    /* Primary stays vibrant */
+    --primary: 322 82% 75%;
+    --primary-foreground: 220 20% 10%;
+    --primary-hover: 29 100% 55%;
+
+    /* Secondary */
+    --secondary: 288 38% 50%;
+    --secondary-foreground: 45 30% 96%;
+
+    /* Accent adjustments for dark mode */
+    --accent-red: 16 90% 55%;
+    --accent-pink: 332 90% 70%;
+
+    /* Vibrant cards stay punchy but slightly muted */
+    --card-yellow: 45 85% 55%;
+    --card-purple: 273 55% 65%;
+    --card-magenta: 321 60% 50%;
+    --card-blue: 199 85% 60%;
+    --card-coral: 349 80% 60%;
+    --card-mint: 156 65% 55%;
+    --card-orange: 24 85% 55%;
+    --card-lavender: 248 75% 72%;
+
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 322 82% 75%;
   }
 }
 

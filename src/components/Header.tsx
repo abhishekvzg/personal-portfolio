@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
@@ -10,13 +11,16 @@ const Header = () => {
             ABHISHEK
           </Link>
 
-          {/* Nav Link */}
-          <a
-            href="#projects"
-            className="text-sm font-bold uppercase tracking-wide hover:opacity-70 transition-opacity"
-          >
-            Projects
-          </a>
+          {/* Right Side */}
+          <div className="flex items-center gap-4">
+            <a
+              href="#projects"
+              className="text-sm font-bold uppercase tracking-wide hover:opacity-70 transition-opacity"
+            >
+              Projects
+            </a>
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </header>
