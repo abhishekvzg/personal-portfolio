@@ -8,7 +8,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-foreground text-background dark:bg-card dark:text-foreground dark:border-t dark:border-foreground/10">
       <div className="px-5 md:px-20 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {/* Name */}
@@ -36,7 +36,7 @@ const Footer = () => {
                 href={link.href}
                 target={link.href.startsWith("mailto") ? undefined : "_blank"}
                 rel="noopener noreferrer"
-                className="p-3 bg-background/10 rounded-full hover:bg-background/20 transition-colors"
+                className="p-3 bg-background/10 rounded-full hover:bg-background/20 transition-colors dark:bg-foreground/10 dark:hover:bg-foreground/20"
                 aria-label={link.label}
               >
                 <link.icon className="w-5 h-5" />
