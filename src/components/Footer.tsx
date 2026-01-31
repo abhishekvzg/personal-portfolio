@@ -16,14 +16,14 @@ const Footer = () => {
             <div className="text-3xl md:text-4xl font-black uppercase tracking-tight">
               ABHISHEK
             </div>
-            <p className="text-background/60 mt-2 text-sm uppercase tracking-wide">
+            <p className="text-background/60 dark:text-foreground/60 mt-2 text-sm uppercase tracking-wide">
               Product Manager
             </p>
           </div>
 
           {/* Tagline */}
           <div className="text-center">
-            <p className="font-serif text-lg text-background/80">
+            <p className="font-serif text-lg text-background/80 dark:text-foreground/80">
               Building products users love.
             </p>
           </div>
@@ -46,8 +46,8 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-6 border-t border-background/20">
-          <p className="text-sm text-center text-background/60 uppercase tracking-wide">
+        <div className="mt-12 pt-6 border-t border-background/20 dark:border-foreground/20">
+          <p className="text-sm text-center text-background/60 dark:text-foreground/60 uppercase tracking-wide">
             © 2025 ABHISHEK. All rights reserved.
           </p>
         </div>
