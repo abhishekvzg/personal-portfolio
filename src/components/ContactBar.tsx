@@ -15,7 +15,7 @@ const ContactBar = () => {
       </a>
       <div className="w-px h-5 bg-background/30" />
       <a
-        href="mailto:abhishek@example.com"
+        href="mailto:abhishekvzg@gmail.com"
         className="flex items-center gap-2 hover:opacity-70 transition-opacity text-sm font-bold uppercase tracking-wide"
         aria-label="Send email"
       >
