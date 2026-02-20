@@ -4,11 +4,8 @@ import ProjectCard from "./ProjectCard";
 import ProjectModal from "./ProjectModal";
 import { cn } from "@/lib/utils";
 
-type SortOption = "newest" | "relevant";
-
 const ProjectGallery = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const [sortBy, setSortBy] = useState<SortOption>("newest");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const toggleTag = (tag: string) => {
@@ -29,16 +26,8 @@ const ProjectGallery = () => {
       );
     }
 
-    // Sort
-    if (sortBy === "newest") {
-      result = [...result].sort(
-        (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-      );
-    }
-    // "relevant" keeps original order (curated relevance)
-
     return result;
-  }, [selectedTags, sortBy]);
+  }, [selectedTags]);
 
   return (
     <section className="px-5 md:px-20 py-12 md:py-16" id="projects">
@@ -77,31 +66,6 @@ const ProjectGallery = () => {
           )}
         </div>
 
-        {/* Sort Bar */}
-        <div className="flex items-center gap-3">
-          <span className="text-sm font-bold uppercase tracking-wide text-foreground/60">
-            Sort:
-          </span>
-          <button
-            onClick={() => setSortBy("newest")}
-            className={cn(
-              "text-sm font-bold uppercase tracking-wide transition-opacity",
-              sortBy === "newest" ? "underline decoration-2" : "opacity-60 hover:opacity-100"
-            )}
-          >
-            Newest
-          </button>
-          <span className="text-foreground/30">|</span>
-          <button
-            onClick={() => setSortBy("relevant")}
-            className={cn(
-              "text-sm font-bold uppercase tracking-wide transition-opacity",
-              sortBy === "relevant" ? "underline decoration-2" : "opacity-60 hover:opacity-100"
-            )}
-          >
-            Relevant
-          </button>
-        </div>
       </div>
 
       {/* Results Count */}
